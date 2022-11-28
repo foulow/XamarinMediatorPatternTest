@@ -21,6 +21,13 @@ namespace XamarinMediatorPatternTest
                 MediatorFlowCallback);
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            MediatorService.Unsubscribe(ApplicationEvents.MediatorChallenged, MediatorFlowCallback);
+        }
+
         private async void MediatorFlowButton_Clicked(object sender, EventArgs e)
         {
             if (MediatorFlowButton.IsEnabled)

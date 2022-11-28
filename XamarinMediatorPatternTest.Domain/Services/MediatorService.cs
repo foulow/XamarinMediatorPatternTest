@@ -26,7 +26,6 @@ namespace XamarinMediatorPatternTest.Domain.Services
         public static async void MediatorFlowSimulateHeavyTask()
         {
             await Task.Delay(15000);
-
             _mediator.Send(ApplicationEvents.MediatorChallenged);
         }
 
