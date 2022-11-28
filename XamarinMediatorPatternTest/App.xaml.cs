@@ -10,7 +10,9 @@ namespace XamarinMediatorPatternTest
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage startPage = new MainPage();
+            NavigationPage navigationPage = new NavigationPage(startPage);
+            Application.Current.MainPage = navigationPage;
         }
 
         protected override void OnStart()

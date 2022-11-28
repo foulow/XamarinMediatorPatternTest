@@ -28,6 +28,11 @@ namespace XamarinMediatorPatternTest.Domain.Common.Enums
         /// </summary>
         MediatorChallenged,
 
+        /// <summary>
+        /// Test event triggered on Mediator flow challenged.
+        /// </summary>
+        MediatorChallengedWithParameter,
+
         #endregion
     }
     }

@@ -7,18 +7,29 @@
                 <Label Text="Mediator Pattern Test!"
                        TextDecorations="Underline"
                        FontSize="Title"
+                       HorizontalTextAlignment="Center"
                        VerticalOptions="StartAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="MediatorFlowLabel"
                        Text="Press the button to start the mediator flow test."
-                       FontSize="Default"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       Margin="10"
                        VerticalOptions="StartAndExpand" 
                        HorizontalOptions="CenterAndExpand" />
                 <Button x:Name="MediatorFlowButton"
                         Text="Test Mediator"
-                        VerticalOptions="EndAndExpand" 
+                        Margin="10"
+                        VerticalOptions="StartAndExpand" 
                         HorizontalOptions="CenterAndExpand" 
                         Clicked="MediatorFlowButton_Clicked" >
+                </Button>
+                <Button x:Name="MediatorFlowWithParameterButton"
+                        Text="Test Mediator With Parameter"
+                        Margin="10"
+                        VerticalOptions="StartAndExpand" 
+                        HorizontalOptions="CenterAndExpand" 
+                        Clicked="MediatorFlowWithParameterButton_Clicked" >
                 </Button>
         </StackLayout>
     </ContentPage.Content>

@@ -16,15 +16,34 @@ namespace XamarinMediatorPatternTest.Domain.Services
             MediatorService.Subscribe(
                 ApplicationEvents.SendMessage,
                 MediatorService.MediatorFlowSimulateHeavyTask);
+
+            MediatorService.Subscribe<bool>(ApplicationEvents.SendMessageWithParameter,
+                MediatorService.MediatorFlowSimulateHeavyTaskWithParameter);
         }
 
-        //Test Method for the mediator flow.
+        # region Test Method for the mediator flow.
+
         public static async void MediatorFlowSimulateHeavyTask()
         {
             await Task.Delay(15000);
 
             _mediator.Send(ApplicationEvents.MediatorChallenged);
         }
+
+        public static async void MediatorFlowSimulateHeavyTaskWithParameter(bool needWait)
+        {
+            if (needWait)
+            {
+                await Task.Delay(15000);
+                _mediator.Send<bool>(ApplicationEvents.MediatorChallengedWithParameter, needWait);
+            }
+            else
+            {
+                _mediator.Send<bool>(ApplicationEvents.MediatorChallengedWithParameter, needWait);
+            }
+        }
+
+        #endregion
 
         #region Indirect Mediator Methods Access.
         public static void Send(ApplicationEvents message)
