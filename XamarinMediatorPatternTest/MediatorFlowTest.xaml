@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMediatorPatternTest.MediatorFlowTest">
+    <ContentPage.Content>
+        <StackLayout>
+                <Label Text="Mediator Pattern Test!"
+                       TextDecorations="Underline"
+                       FontSize="Title"
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="MediatorFlowLabel"
+                       Text="Press the button to start the mediator flow test."
+                       FontSize="Default"
+                       VerticalOptions="StartAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="MediatorFlowButton"
+                        Text="Test Mediator"
+                        VerticalOptions="EndAndExpand" 
+                        HorizontalOptions="CenterAndExpand" 
+                        Clicked="MediatorFlowButton_Clicked" >
+                </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

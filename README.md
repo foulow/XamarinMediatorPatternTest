@@ -1,1 +1,1 @@
-# XamarinMedietorPatternTest
+# XamarinMediatorPatternTest
